@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 21
+    }
+}
+
+dependencies {
+    implementation project(':common-messaging')
+    implementation project(':player')
+    implementation 'com.google.android.exoplayer:extension-gvr:2.6.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}

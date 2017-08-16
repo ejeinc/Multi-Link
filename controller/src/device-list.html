@@ -1,0 +1,10 @@
+<p class="help-block">Devices: {{$ctrl.devices.length}}
+  <button class="btn btn-default btn-sm pull-right" type="button" ng-click="$ctrl.onClickReload()">
+    <i class="glyphicon glyphicon-refresh"></i> Reload
+  </button>
+</p>
+<div class="list-group">
+  <button class="list-group-item" ng-repeat="item in $ctrl.devices">
+    <span>{{item.imei}} {{item.name}}</span>
+  </button>
+</div>

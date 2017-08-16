@@ -1,0 +1,10 @@
+{
+  "name": "controller",
+  "version": "0.0.1",
+  "main": "main.js",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "ip": "^1.1.5",
+    "jquery": "^3.2.1"
+  }
+}

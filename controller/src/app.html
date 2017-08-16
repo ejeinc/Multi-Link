@@ -1,0 +1,28 @@
+<div class="container">
+  <div>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">Devices </a></li>
+      <li><a href="#tab-2" role="tab" data-toggle="tab">Videos </a></li>
+    </ul>
+
+    <div class="tab-content">
+
+      <!-- Device list (default active) -->
+      <div class="tab-pane fade in active" role="tabpanel" id="tab-1">
+        <device-list devices="$ctrl.devices" on-click-reload="$ctrl.pingToDevices()"></device-list>
+      </div>
+
+      <!-- Video list -->
+      <div class="tab-pane fade" role="tabpanel" id="tab-2">
+        <video-list videos="$ctrl.videos" on-select="$ctrl.selectVideo(item)" selected-video="$ctrl.selectedVideo"></video-list>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Media control UI -->
+<control disabled="$ctrl.controlDisabled()" playing="$ctrl.playing" duration="$ctrl.selectedVideo.length" position="$ctrl.estimatedCurrentPosition"
+  on-skip-previous="$ctrl.skipPrevious()" on-play="$ctrl.togglePlaying()" on-pause="$ctrl.togglePlaying()" on-skip-next="$ctrl.skipNext()"></control>

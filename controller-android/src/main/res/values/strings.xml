@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Multi-Link Controller</string>
+    <string name="tab_text_1">Devices</string>
+    <string name="tab_text_2">Videos</string>
+    <string name="video_is_not_on_device">Video is not on device. Cannot play video on controller.</string>
+    <string name="videos">Videos: </string>
+    <string name="devices">Devices: </string>
+    <string name="reload">Reload</string>
+</resources>

@@ -1,0 +1,18 @@
+.tab-pane {
+  padding-bottom: 80px;
+}
+
+control {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(0deg, #fff, #fff 80%, rgba(255, 253, 255, 0));
+  z-index: 10;
+}
+
+control .progress {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}

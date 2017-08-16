@@ -1,0 +1,6 @@
+<p class="help-block">Videos: {{$ctrl.videos.length}}</p>
+<div class="list-group">
+  <button class="list-group-item" ng-class="{'active': item === $ctrl.selectedVideo}" ng-repeat="item in $ctrl.videos" ng-click="$ctrl.onSelect({item})">
+    <span>{{item.name}}</span>
+  </button>
+</div>

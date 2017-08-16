@@ -1,0 +1,22 @@
+<scene class="com.eje_c.multilink.gearvr.PlayerScene">
+
+    <entity id="@+id/waiting">
+
+        <view
+            id="@+id/text"
+            position="0 0 -10"
+            src="@layout/waiting" />
+
+        <entity
+            geometry="primitive: globe"
+            surface="renderer: @drawable/background"
+            visible="true" />
+
+    </entity>
+
+    <entity
+        geometry="primitive: globe"
+        id="@+id/screen"
+        visible="false" />
+
+</scene>

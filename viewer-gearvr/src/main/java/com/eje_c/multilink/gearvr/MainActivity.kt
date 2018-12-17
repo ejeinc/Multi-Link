@@ -8,10 +8,9 @@ import android.os.IBinder
 import android.util.Log
 import com.eje_c.multilink.udp.MultiLinkUdpMessenger
 import com.eje_c.multilink.udp.UdpSocketService
+import org.gearvrf.GVRActivity
 
-import org.meganekkovr.GearVRActivity
-
-class MainActivity : GearVRActivity() {
+class MainActivity : GVRActivity() {
     private val TAG = "MainActivity"
 
     private val conn = object : ServiceConnection {
@@ -32,6 +31,8 @@ class MainActivity : GearVRActivity() {
 
         // Activity開始と同時にUDP受信サービスを開始。終了時に停止する。
         bindService(Intent(this, UdpSocketService::class.java), conn, BIND_AUTO_CREATE)
+
+        main = App(this)
     }
 
     override fun onDestroy() {

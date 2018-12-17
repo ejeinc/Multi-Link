@@ -19,14 +19,32 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+    }
 }
+
+repositories {
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+ext.gearvrfVersion = '4.0.1-SNAPSHOT'
+project.ext.daydreamVersion = '1.180.0'
+project.ext.jomlVersion = "1.9.3-SNAPSHOT"
+project.ext.gsonVersion = '2.8.2'
 
 dependencies {
     implementation project(':viewer-common')
     implementation project(':common-messaging')
 
-    implementation 'org.meganekkovr:meganekko:3.2.1'
-    implementation 'org.joml:joml:1.9.2'
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation "org.joml:joml-android:$jomlVersion"
+    implementation "org.gearvrf:framework:$gearvrfVersion"
+    implementation "org.gearvrf:backend_daydream:$gearvrfVersion"
+    implementation "org.gearvrf:backend_oculus:$gearvrfVersion"
+    implementation "com.google.vr:sdk-base:$daydreamVersion"
     implementation 'com.android.support:support-core-utils:28.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }

@@ -4,18 +4,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        android:label="@string/app_name">
 
         <!-- You have to declare to require Gear VR -->
         <meta-data
             android:name="com.samsung.android.vr.application.mode"
             android:value="vr_only" />
-
-        <!-- Declare your App class extends MeganekkoApp -->
-        <meta-data
-            android:name="org.meganekkovr.App"
-            android:value="com.eje_c.multilink.gearvr.App" />
 
         <activity
             android:name=".MainActivity"

@@ -6,6 +6,7 @@ import android.database.Cursor
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
+import android.provider.Settings
 import android.telephony.TelephonyManager
 import java.io.File
 
@@ -25,7 +26,7 @@ class DeviceInfo(val imei: String, val name: String, val videos: List<VideoInfo>
         fun get(context: Context): DeviceInfo {
 
             val telephonyManager = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
-            val imei = telephonyManager.deviceId
+            val imei = telephonyManager.deviceId ?: Settings.Secure.ANDROID_ID
             val videoList = getVRVideos(context)
 
             return DeviceInfo(imei, "${Build.BRAND}: ${Build.MODEL}", videoList)

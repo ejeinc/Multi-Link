@@ -2,12 +2,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
-
+    compileSdkVersion 28
     defaultConfig {
         applicationId 'com.eje_c.multilink.cardboard'
-        minSdkVersion 21
+        minSdkVersion 25
         targetSdkVersion 21
         versionCode 1
         versionName '1.0'
@@ -33,7 +31,7 @@ dependencies {
     implementation project(':viewer-common')
     implementation project(':common-messaging')
 
-    implementation 'com.google.vr:sdk-base:1.101.0'
+    implementation 'com.google.vr:sdk-base:1.180.0'
     implementation 'org.rajawali3d:rajawali:1.1.970'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
